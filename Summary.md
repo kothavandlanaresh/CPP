@@ -24,4 +24,4 @@ For detailed examples and explanations, refer to [01_inlie_extern_friend.md](Mar
 - 📝 **Uniform Initialization (Brace Initialization)**: Uses braces `{}` to initialize the object. It is part of the C++11 standard and later.
 - 📝 **Default Initialization**: Calls the default constructor of `MyClass`.
 
-For detailed examples and explanations, refer to [02_class-object-initialization.md](Markdown_Files/02_class-object-initialization.md).
+For detailed examples and explanations, refer to [02_class-object-initialization.md](Markdown_Files/02_Class_Objec_Initilisation.md).
