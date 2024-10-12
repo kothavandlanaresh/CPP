@@ -1,7 +1,8 @@
 # Important Notes
 
 ### Casting Away Const
-Casting away `const` can be done but it is a bad practice.
+    Casting away `const` can be done but it is a bad practice.
+
 
 ### String Initialization
 - **Incorrect Initialization**: `char str1 = 'abc';` - Incorrect way to initialize a character variable, causes a compilation error.
@@ -9,8 +10,10 @@ Casting away `const` can be done but it is a bad practice.
 - **Constant Character Pointer**: `const char* str3 = "abc";` - Correct way to handle string literals using primitive types.
 - **std::string**: `std::string str4 = "abc";` - Recommended way to handle strings in C++.
 
+
 ### Globals
-Globals are no good.
+    Globals are no good.
+
 
 ### Reference 01
 - **Inline Functions**: Defined with `inline` to suggest inlining the function's body at the call site.
