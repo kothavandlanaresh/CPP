@@ -456,7 +456,7 @@
 
 ---
 
-Pointers and Memory Addresses(multiple pointers can point to one address but one address can only hold a single entity)
+Pointers and Memory Addresses ( multiple pointers can point to one address but one address can only hold a single entity )
 
 #### Key Points
 
