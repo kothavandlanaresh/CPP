@@ -186,7 +186,7 @@
 
 ---
 
-### Reference 21: Passing Mechanisms in C++
+### Passing Mechanisms in C++
 <span style="font-size: 50%;">**Reference 21**</span>
 
 #### Overview
