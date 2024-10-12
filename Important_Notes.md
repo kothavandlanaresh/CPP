@@ -16,10 +16,10 @@
 ### Binding a Null Pointer to a Reference
 - 🚫 **Illegal Operation**: Binding a null pointer to a reference is illegal and will result in undefined behavior.
 
-#### Example
-```cpp
-int* p = nullptr;
-int& ref = *p; // Illegal: Dereferencing a null pointer to bind to a reference
+   #### Example
+         ```cpp
+         int* p = nullptr;
+         int& ref = *p; // Illegal: Dereferencing a null pointer to bind to a reference
 
 ---
 
