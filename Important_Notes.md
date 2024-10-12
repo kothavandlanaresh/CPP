@@ -8,7 +8,7 @@
    #### Example
          const int a = 10;
          int* p = const_cast<int*>(&a);
-         *p = 20; 
+         *p = 20; // confusing the compiler by (const int a) will lead to errors/
 
 
 ---
