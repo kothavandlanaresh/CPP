@@ -250,8 +250,8 @@
 
 ---
 
-Working with `&`, `*`, and `&&` in C++
-<span style="font-size: 50%;">**Reference 04**</span>
+### Reference 21: Working with `&`, `*`, and `&&` in C++
+<span style="font-size: 50%;">**Reference 21**</span>
 
 #### Overview
 - **Definition**: Different ways to use `&`, `*`, and `&&` in C++, each with its own use cases and implications.
@@ -374,6 +374,58 @@ Working with `&`, `*`, and `&&` in C++
       ```cpp
       const int &constRvalueRef = 60; // constRvalueRef binds to the temporary rvalue 60
       std::cout << "Const reference to rvalue: " << constRvalueRef << std::endl; // Should output 60
+      ```
+
+#### Possible Wrong Bindings
+
+14. **Binding a Null Pointer to a Reference (Illegal)**:
+    - **Example**:
+      ```cpp
+      int *nullPtr = nullptr;
+      // int &nullRef = *nullPtr; // Dereferencing a null pointer is illegal
+      ```
+
+15. **Binding a Temporary Object to a Non-const Lvalue Reference (Illegal)**:
+    - **Example**:
+      ```cpp
+      // int &tempRef = 70; // Temporary rvalue cannot bind to non-const lvalue reference
+      ```
+
+16. **Binding a Const Reference to a Non-const Object (Legal but Misleading)**:
+    - **Example**:
+      ```cpp
+      int nonConstVal = 80;
+      const int &constRefToNonConst = nonConstVal; // Legal but misleading
+      nonConstVal = 90; // Modifying the original non-const object
+      std::cout << "Const reference to non-const object: " << constRefToNonConst << std::endl; // Outputs 90 (misleading)
+      ```
+
+17. **Binding a Pointer to a Deleted Object (Illegal)**:
+    - **Example**:
+      ```cpp
+      int *deletedPtr = new int(100);
+      delete deletedPtr;
+      // int &deletedRef = *deletedPtr; // Dereferencing a pointer to a deleted object is illegal
+      ```
+
+18. **Binding a Reference to an Out-of-Scope Variable (Illegal)**:
+    - **Example**:
+      ```cpp
+      // int &outOfScopeRef;
+      // {
+      //     int temp = 110;
+      //     outOfScopeRef = temp; // Binding to a variable that will go out of scope
+      // }
+      // std::cout << "Out-of-scope reference: " << outOfScopeRef << std::endl; // Undefined behavior
+      ```
+
+19. **Binding a Reference to a Moved-from Object (Legal but Dangerous)**:
+    - **Example**:
+      ```cpp
+      int movedFromVal = 120;
+      int &&movedToRef = std::move(movedFromVal); // movedFromVal is now in a valid but unspecified state
+      std::cout << "Moved-from value: " << movedFromVal << std::endl; // Unspecified state
+      std::cout << "Moved-to reference: " << movedToRef << std::endl; // Outputs 120
       ```
 
 #### Summary

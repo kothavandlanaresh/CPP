@@ -159,3 +159,44 @@ std::cout << "Rvalue reference from function: " << rvalueRefFunc << std::endl; /
 // This is allowed because the reference is const, which extends the lifetime of the temporary.
 const int &constRvalueRef = 60; // constRvalueRef binds to the temporary rvalue 60
 std::cout << "Const reference to rvalue: " << constRvalueRef << std::endl; // Should output 60
+
+
+// Possible Wrong Bindings
+
+// Case 14: Binding a Null Pointer to a Reference (Illegal)
+// Uncommenting the following line will cause undefined behavior because nullPtr is null.
+// int *nullPtr = nullptr;
+// int &nullRef = *nullPtr; // Dereferencing a null pointer is illegal
+
+// Case 15: Binding a Temporary Object to a Non-const Lvalue Reference (Illegal)
+// Uncommenting the following line will cause a compilation error because a temporary object cannot bind to a non-const lvalue reference.
+// int &tempRef = 70; // Temporary rvalue cannot bind to non-const lvalue reference
+
+// Case 16: Binding a Const Reference to a Non-const Object (Legal but Misleading)
+// This is legal but can be misleading because the const reference suggests immutability, but the original object is non-const.
+int nonConstVal = 80;
+const int &constRefToNonConst = nonConstVal; // Legal but misleading
+nonConstVal = 90; // Modifying the original non-const object
+std::cout << "Const reference to non-const object: " << constRefToNonConst << std::endl; // Outputs 90 (misleading) constRefToNonConst is not const which is misleading to the reader.
+
+// Case 17: Binding a Pointer to a Deleted Object (Illegal)
+// Uncommenting the following lines will cause undefined behavior because the pointer points to a deleted object.
+// int *deletedPtr = new int(100);
+// delete deletedPtr;
+// int &deletedRef = *deletedPtr; // Dereferencing a pointer to a deleted object is illegal
+
+// Case 18: Binding a Reference to an Out-of-Scope Variable (Illegal)
+// Uncommenting the following lines will cause undefined behavior because the reference points to an out-of-scope variable.
+// int &outOfScopeRef;
+// {
+//     int temp = 110;
+//     outOfScopeRef = temp; // Binding to a variable that will go out of scope
+// }
+// std::cout << "Out-of-scope reference: " << outOfScopeRef << std::endl; // Undefined behavior
+
+// Case 19: Binding a Reference to a Moved-from Object (Legal but Dangerous)
+// This is legal but dangerous because the moved-from object is in a valid but unspecified state.
+int movedFromVal = 120;
+int &&movedToRef = std::move(movedFromVal); // movedFromVal is now in a valid but unspecified state
+std::cout << "Moved-from value: " << movedFromVal << std::endl; // Unspecified state
+std::cout << "Moved-to reference: " << movedToRef << std::endl; // Outputs 120
