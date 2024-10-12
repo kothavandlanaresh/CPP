@@ -26,7 +26,7 @@
 
 ### Initialization Methods
 <span style="font-size: 50%;">**Reference 02**</span>
-- **Direct Initialization**: `MyClass obj1(99);` - Directly calls the constructor with arguments.
+ **Direct Initialization**: `MyClass obj1(99);` - Directly calls the constructor with arguments.
 - **Copy Initialization**: `MyClass obj2 = 99;` - Looks like assignment but calls the constructor.
 - **Uniform Initialization**: `MyClass obj3{99};` - Uses braces, avoids parsing issues, and is preferred in modern C++.
 - **Default Initialization**: `MyClass obj4;` - Calls the default constructor.
@@ -88,3 +88,23 @@
 - Prefer range-based for loops for better readability and performance.
 - Use `const` references to avoid unnecessary copying.
 - Choose the appropriate loop type based on the specific use case.
+
+---
+
+### Break and Continue Statements
+<span style="font-size: 50%;">**Reference 15**</span>
+
+#### **'break' Statement**
+- Used to exit a loop (for, while, do-while) or switch statement prematurely.
+- Useful to stop the loop based on a certain condition.
+- Can make the code harder to understand and maintain if not used carefully.
+- Can cause memory leaks if not used properly with dynamic memory allocation.
+
+#### **'continue' Statement**
+- Skips the rest of the loop body for the current iteration and proceeds to the next iteration.
+- Useful to skip certain iterations based on a condition.
+- Can make the loop logic complex and harder to follow if overused.
+
+#### **Main Differences**
+- 'break' exits the loop entirely, while 'continue' skips to the next iteration.
+- 'break' is often used to terminate the loop based on a condition, whereas 'continue' is used to skip specific iterations.
