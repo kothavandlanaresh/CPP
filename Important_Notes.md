@@ -8,7 +8,7 @@
    #### Example
          const int a = 10;
          int* p = const_cast<int*>(&a);
-         *p = 20; // confusing the compiler by (const int a) will lead to errors/
+         *p = 20; // confusing the compiler by (const int a) will lead to errors
 
 
 ---
@@ -183,6 +183,60 @@
 - 🛠️ By casting the address to `void*`, you ensure that the address is printed correctly and consistently, regardless of the type of the variable.
 - 📦 When passing `void*` as a parameter, you must cast it back to the appropriate type before dereferencing it.
 - 📌 This is like the `auto` keyword in C++ which automatically deduces the type of the variable, except here we are casting the address of the variable to a `void*` pointer.
+
+---
+
+### Reference 21: Passing Mechanisms in C++
+<span style="font-size: 50%;">**Reference 21**</span>
+
+#### Overview
+- **Definition**: Different ways to pass arguments to functions in C++, each with its own pros and cons.
+
+#### Key Points
+
+1. **Pass by Value**:
+   - 📋 The function receives a copy of the argument.
+   - 🔄 Changes to the parameter do not affect the original argument.
+   - **Pros**: Safe, no side effects.
+   - **Cons**: Can be inefficient for large objects due to copying overhead.
+
+2. **Pass by Reference**:
+   - 🔗 The function receives a reference to the original argument.
+   - 🔄 Changes to the parameter affect the original argument.
+   - **Pros**: Efficient, no copying.
+   - **Cons**: Can lead to side effects if the original argument is modified unintentionally.
+
+3. **Pass by Pointer**:
+   - 📍 The function receives a pointer to the original argument.
+   - 🔄 Changes to the dereferenced pointer affect the original argument.
+   - **Pros**: Efficient, can be used to indicate that a parameter is optional (by passing `nullptr`).
+   - **Cons**: Can lead to side effects, requires careful handling of pointers.
+
+4. **Pass by Const Reference**:
+   - 🔗 The function receives a `const` reference to the original argument.
+   - 🔄 Changes to the parameter do not affect the original argument.
+   - **Pros**: Efficient, no copying, safe from modification.
+   - **Cons**: None significant, but cannot modify the argument.
+
+5. **Pass by Const Pointer**:
+   - 📍 The function receives a `const` pointer to the original argument.
+   - 🔄 Changes to the dereferenced pointer do not affect the original argument.
+   - **Pros**: Efficient, no copying, safe from modification.
+   - **Cons**: None significant, but cannot modify the argument.
+
+6. **Pass by Rvalue Reference**:
+   - 🔗 The function receives a reference to an rvalue (temporary object).
+   - 🔄 Changes to the parameter affect the original rvalue.
+   - **Pros**: Efficient, allows modification of temporary objects.
+   - **Cons**: Can be confusing, should be used with care to avoid dangling references.
+
+#### Summary
+- **Pass by Value**: Safe, no side effects, but can be inefficient for large objects.
+- **Pass by Reference**: Efficient, no copying, but can lead to side effects.
+- **Pass by Pointer**: Efficient, can indicate optional parameters, but requires careful handling.
+- **Pass by Const Reference**: Efficient, no copying, safe from modification.
+- **Pass by Const Pointer**: Efficient, no copying, safe from modification.
+- **Pass by Rvalue Reference**: Efficient, allows modification of temporary objects, but can be confusing and should be used with care.
 
 ---
 
