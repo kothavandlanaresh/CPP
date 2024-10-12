@@ -123,10 +123,11 @@
 
 ---
 
-### References in C++
+### &( ) References in C++
 <span style="font-size: 50%;">**Reference 18**</span>
 
 #### Overview
+- The & () is a fuction that returns an address.
 - **Definition**: A reference is an alias for another variable, providing a way to access the same memory location with a different name.
 - **Usage**: Often used for parameter passing in functions to avoid copying large amounts of data.
 
@@ -154,5 +155,28 @@
 
 ---
 
+### `void*` in C++
+<span style="font-size: 50%;">**Reference 18a**</span>
 
+#### Overview
+- **Definition**: A `void*` (void pointer) is a generic pointer that can point to any data type.
+
+#### Key Points
+1. **Casting to `void*`**:
+   - 🔄 Ensures that `std::cout` can print the address of any variable in a consistent format.
+   - 🛠️ By casting the address to `void*`, you ensure that the address is printed correctly and consistently, regardless of the type of the variable.
+
+2. **Usage**:
+   - 📤 Useful when you need to print addresses or work with pointers to different types without knowing the type at compile time.
+   - 📦 When passing `void*` as a parameter, you must cast it back to the appropriate type before dereferencing it.
+
+#### Summary
+- **`void*`**: A generic pointer that can point to any data type.
+- **Casting to `void*`**: Ensures that `std::cout` can print the address of any variable in a consistent format.
+- **Usage**: Useful when you need to print addresses or work with pointers to different types without knowing the type at compile time.
+- 🛠️ By casting the address to `void*`, you ensure that the address is printed correctly and consistently, regardless of the type of the variable.
+- 📦 When passing `void*` as a parameter, you must cast it back to the appropriate type before dereferencing it.
+- 📌 This is like the `auto` keyword in C++ which automatically deduces the type of the variable, except here we are casting the address of the variable to a `void*` pointer.
+
+---
 

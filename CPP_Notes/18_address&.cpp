@@ -59,11 +59,32 @@
  * @param ref A reference to an integer whose value will be incremented.
  */
 void increment(int &ref) {
-    ref++;
+    ref++; // Increment the value of the integer that 'ref' refers to.
 }
 
 int main() {
     int a = 10;
+    int b = 20;
+
+    // Create a reference to variable 'a'
+    int &ref = a;
+
+    std::cout << "ref initially refers to a: " << ref << std::endl; // Output: 10
+
+    // Changing the value of 'a' through the reference
+    ref = 15;
+    std::cout << "a after changing ref: " << a << std::endl; // Output: 15
+
+    // Attempting to rebind the reference to another variable 'b'
+    // This is not allowed and will not compile:
+    // ref = b; // This line would change the value of 'a' to 20, not rebind ref to 'b'
+
+    // Correct way to change the value of 'b' through the reference
+    ref = b;
+    std::cout << "a after assigning b to ref: " << a << std::endl; // Output: 20
+    std::cout << "b: " << b << std::endl; // Output: 20
+
+    // Additional example with the increment function
     int &refA = a; // 'refA' is a reference to 'a'. It is now an alias for 'a'.
 
     std::cout << "Initial value of a: " << a << std::endl;
