@@ -5,7 +5,7 @@ int main() {
 
     // Advantage: Dynamic memory allocation
     // Allocate memory for an integer on the heap
-    int* ptr = new int;
+    int* ptr = new int;//difference between new int and new in[10] is that new int allocates memory for a single integer, while new int[10] allocates memory for an array of 10 integers.
     *ptr = 10;
     std::cout << "Value: " << *ptr << std::endl;
 
