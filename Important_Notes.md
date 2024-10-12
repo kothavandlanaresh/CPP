@@ -17,7 +17,7 @@
 ---
 
 ### Inline Functions, Extern Variables, and Friend Functions
-<span style="font-size: 50%;">**Reference 01**: Detailed explanations can be found in `Reference01.cpp`.</span>
+<span style="font-size: 50%;">**Reference 01**</span>
 - **Inline Functions**: Defined with `inline` to suggest inlining the function's body at the call site.
 - **Extern Variables**: Declared with `extern` to indicate definition in another translation unit, typically declared in headers and defined in source files.
 - **Friend Functions**: Declared with `friend` within a class to access private and protected members.
@@ -25,7 +25,7 @@
 ---
 
 ### Initialization Methods
-<span style="font-size: 50%;">**Reference 02**: Detailed explanations can be found in `Reference02.cpp`.</span>
+<span style="font-size: 50%;">**Reference 02**</span>
 - **Direct Initialization**: `MyClass obj1(99);` - Directly calls the constructor with arguments.
 - **Copy Initialization**: `MyClass obj2 = 99;` - Looks like assignment but calls the constructor.
 - **Uniform Initialization**: `MyClass obj3{99};` - Uses braces, avoids parsing issues, and is preferred in modern C++.
@@ -34,14 +34,14 @@
 ---
 
 ### Compile-time vs. Runtime
-<span style="font-size: 50%;">**Reference 03**: Detailed explanations can be found in `03_compiletime_and_runtime.cpp`.</span>
+<span style="font-size: 50%;">**Reference 03**</span>
 - **Compile-time**: Calculations and decisions made during the compilation of the program. Using `constexpr` can lead to performance benefits as the result is computed during compilation.
 - **Runtime**: Calculations and decisions made during the execution of the program. Functions not marked with `constexpr` are computed during runtime.
 
 ---
 
 ### Containers and Smart Pointers
-<span style="font-size: 50%;">**Reference 13**: Detailed explanations can be found in `Reference13.cpp`.</span>
+<span style="font-size: 50%;">**Reference 13**</span>
 - **std::array**: A fixed-size array offering bounds checking in debug mode and seamless integration with the C++ Standard Library, providing a safer alternative to raw arrays.
 - **std::vector**: A dynamic array that resizes automatically, manages memory efficiently, and includes bounds checking, making it highly flexible and robust.
 - **Smart Pointers (std::unique_ptr and std::shared_ptr)**: These manage the lifetime of dynamically allocated objects, reducing memory leaks and dangling pointers through automatic memory management.
@@ -57,7 +57,7 @@
 ---
 
 ### Loop Types and Performance Optimization
-<span style="font-size: 50%;">**Reference 14**: Detailed explanations can be found in `Reference14.cpp`.</span>
+<span style="font-size: 50%;">**Reference 14**</span>
 
 #### **Range-based for loop**
 - **Syntax**: `for (const auto& element : container)`
