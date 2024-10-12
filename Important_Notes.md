@@ -13,6 +13,17 @@
 
 ---
 
+### Binding a Null Pointer to a Reference
+- 🚫 **Illegal Operation**: Binding a null pointer to a reference is illegal and will result in undefined behavior.
+
+#### Example
+```cpp
+int* p = nullptr;
+int& ref = *p; // Illegal: Dereferencing a null pointer to bind to a reference
+
+---
+
+
 ### String Initialization
 - ❌ **Incorrect Initialization**: `char str1 = 'abc';` - Incorrect way to initialize a character variable, causes a compilation error.
 - 🔍 **Character Pointer**: `char* str2 = "abc";` - Character pointer to a string literal, but will only print the first character.
