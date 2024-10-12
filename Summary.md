@@ -10,6 +10,12 @@
 7. [Constexpr Teaser in C++](#constexpr-teaser-in-c)
 8. [Block Scope in C++](#block-scope-in-c)
 9. [Raw Arrays in C++](#raw-arrays-in-c)
+10. [Using std::iota with Raw Arrays in C++](#using-std-iota-with-raw-arrays-in-c)
+11. [Loops in C++](#loops-in-c)
+12. [Continue and Break Statements in C++](#continue-and-break-statements-in-c)
+13. [Functions in C++](#functions-in-c)
+14. [Recursive Functions in C++](#recursive-functions-in-c)
+15. [References in C++](#references-in-c)
 
 
 
@@ -133,38 +139,74 @@ For detailed examples and explanations, refer to [13_raw_arrays.md](Markdown_Fil
 ---
 
 
+#### Using std::iota with Raw Arrays in C++
+- 📝 **Raw Array Creation**: Creates a raw array of integers with a fixed size.
+- 📝 **Using `std::iota`**: Fills the array with sequentially increasing values starting from 0.
+- 📝 **Printing Array Contents**: Uses a loop to print the contents of the array.
+
+For detailed examples and explanations, refer to [13a_iota_raw_arrays.md](Markdown_Files/13a_iota_raw_arrays.md).
+
+
+---
+
+
+#### Loops in C++
+- 📝 **Range-based for loop**: More readable, avoids explicit indexing, prevents accidental modification, better performance.
+- 📝 **Traditional for loop**: Provides more control, useful for modifying elements or accessing the index, more verbose.
+- 📝 **While loop**: Useful when the number of iterations is not known beforehand, can be less readable.
+- 📝 **Do-while loop**: Guarantees at least one iteration, useful when the loop body needs to be executed at least once.
+- 📝 **Performance Optimization Tips**: Prefer range-based for loops, use const references, choose the appropriate loop type.
+
+For detailed examples and explanations, refer to [14_loops.md](Markdown_Files/14_loops.md).
 
 
 
 ---
 
 
+#### Continue and Break Statements in C++
+- 📝 **`break` Statement**: Exits a loop prematurely.
+- 📝 **`continue` Statement**: Skips the current iteration and proceeds to the next one.
 
-
-
-
----
-
-
-
+For detailed examples and explanations, refer to [15_continue_and_break.md](Markdown_Files/15_continue_and_break.md).
 
 
 ---
 
 
+#### Functions in C++
+- 📝 **Functions with no return type and no parameters**: Demonstrates a function that prints a greeting message.
+- 📝 **Functions with return type and no parameters**: Demonstrates a function that returns a fixed integer value.
+- 📝 **Functions with parameters and no return type**: Demonstrates a function that prints the sum of two integers.
+- 📝 **Functions with parameters and return type**: Demonstrates a function that returns the product of two integers.
+- 📝 **Template functions**: Demonstrates a template function that returns the sum of two values of type T.
+- 📝 **Functions that take `std::function` as a parameter**: Demonstrates a function that executes a function passed as a `std::function` parameter.
 
+For detailed examples and explanations, refer to [16_functions.md](Markdown_Files/16_functions.md).
 
 
 ---
 
 
+#### Recursive Functions in C++
+- 📝 **Recursive Function**: A function that calls itself to solve a problem.
+- 📝 **Base Case**: The condition under which the recursion stops.
+- 📝 **Recursive Case**: The part of the function where it calls itself with a smaller problem size.
+- 📝 **Factorial Calculation**: The factorial of a number `n` (denoted as `n!`) is the product of all positive integers less than or equal to `n`.
 
+For detailed examples and explanations, refer to [17_recursive_functions.md](Markdown_Files/17_recursive_functions.md).
 
 
 ---
 
 
+#### References in C++
+- 📝 **References**: An alias for another variable, providing a way to access the same memory location with a different name.
+- 📝 **Parameter Passing**: References are often used for parameter passing in functions to avoid copying large amounts of data.
+- 📝 **Modifying Variables**: References can be used to modify the original variable.
+- 📝 **Rebinding References**: Once a reference is bound to a variable, it cannot be changed to refer to another variable.
 
+For detailed examples and explanations, refer to [18_address&.md](Markdown_Files/18_address&.md).
 
 
 
