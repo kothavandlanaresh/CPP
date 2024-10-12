@@ -1,6 +1,3 @@
-### file:///c%3A/Users/k6ros/Documents/GitHub/CPP/Important_Notes.md
-
-```markdown
 ### Summary of Important Concepts
 
 #### Pointer and Array Arithmetic in C++
