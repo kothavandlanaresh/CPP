@@ -7,11 +7,11 @@
 - **Range-based For Loop with Array**: Allows iterating over array elements using a range-based for loop.
 - **Iterating with Pointers**: Allows iterating over array elements using pointers in a traditional for loop, but pointers cannot be directly used in range-based for loops.
 
-For detailed examples and explanations, refer to [26_pointer_array_arithmetic.md](26_pointer_array_arithmetic.md).
+For detailed examples and explanations, refer to [26_pointer_array_arithmetic.md](CPP_Notes/26_pointer_array_arithmetic.md).
 
 #### Inline, Extern, and Friend Functions in C++
 - **Inline Functions**: Functions defined with the `inline` keyword to suggest to the compiler to insert the function's body where the function call is made.
 - **Extern Variables**: Variables declared with the `extern` keyword to indicate that the variable is defined in another translation unit.
 - **Friend Functions**: Functions declared with the `friend` keyword within a class to allow access to the class's private and protected members.
 
-For detailed examples and explanations, refer to [01_inlie_extern_friend.md](01_inlie_extern_friend.md).
+For detailed examples and explanations, refer to [01_inlie_extern_friend.md](CPP_Notes/01_inlie_extern_friend.md).
