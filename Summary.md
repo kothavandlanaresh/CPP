@@ -8,7 +8,7 @@
 ---
 
 
-#### Inline, Extern, and Friend Functions in C++
+#### 1. Inline, Extern, and Friend Functions in C++
 - **Inline Functions**:
   - 📋 Functions defined with the `inline` keyword to suggest to the compiler to insert the function's body where the function call is made.
 - **Extern Variables**:
@@ -20,7 +20,7 @@ For detailed examples and explanations, refer to [01_inlie_extern_friend.md](Mar
 
 ---
 
-#### Class Object Initialization in C++
+#### 2. Class Object Initialization in C++
 - **Direct Initialization**:
   - 📋 Directly calls the constructor of `MyClass` with the argument.
 - **Copy Initialization**:
