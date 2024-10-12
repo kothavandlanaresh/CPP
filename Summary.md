@@ -5,6 +5,9 @@
 2. [Class Object Initialization in C++](#class-object-initialization-in-c)
 
 
+---
+
+
 #### Inline, Extern, and Friend Functions in C++
 - **Inline Functions**:
   - 📋 Functions defined with the `inline` keyword to suggest to the compiler to insert the function's body where the function call is made.
@@ -14,6 +17,8 @@
   - 📋 Functions declared with the `friend` keyword within a class to allow access to the class's private and protected members.
 
 For detailed examples and explanations, refer to [01_inlie_extern_friend.md](Markdown_Files/01_inlie_extern_friend.md).
+
+---
 
 #### Class Object Initialization in C++
 - **Direct Initialization**:
