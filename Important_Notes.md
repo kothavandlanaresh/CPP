@@ -111,3 +111,14 @@
 #### **Main Differences**
 - 'break' exits the loop entirely, while 'continue' skips to the next iteration.
 - 'break' is often used to terminate the loop based on a condition, whereas 'continue' is used to skip specific iterations.
+
+---
+
+### Recursive Functions
+<span style="font-size: 50%;">**Reference 17**</span>
+- 🛑 **Base Case**: Always define a base case to stop the recursion.
+- 📉 **Reduce Problem Size**: Ensure that each recursive call reduces the problem size.
+- ⚠️ **Stack Overflow**: Be mindful of stack overflow for deep recursion. Consider using iterative solutions or tail recursion optimization if supported by the compiler.
+- 🌳 **Natural Recursive Structure**: Use recursion for problems that have a natural recursive structure, such as tree traversals, combinatorial problems, and divide-and-conquer algorithms.
+
+---
