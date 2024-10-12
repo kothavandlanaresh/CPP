@@ -1,66 +1,53 @@
-# 26_pointer_array_arithmetic.cpp
-
 ## Overview
 Demonstrates various methods to print array elements using pointers and array indexing in C++.
 
 ## Key Points
 
 1. **Pointer Arithmetic**:
-   - 📋 You can use pointer arithmetic to access array elements.
+   - **Description**: Accesses array elements by incrementing the pointer.
    - **Example**:
      ```cpp
-     int arr[] = {10, 20, 30, 40, 50};
      int* ptr = arr;
      for (int i = 0; i < 5; ++i) {
-         std::cout << *(ptr + i) << " "; // Accessing array elements using pointer arithmetic
+         std::cout << *(ptr + i) << " ";
      }
      ```
 
 2. **Incorrect Usage of Pointers**:
-   - 🚫 Printing the pointer address instead of the values is incorrect.
+   - **Description**: Highlights the mistake of printing the pointer address instead of the values.
    - **Example**:
      ```cpp
-     int* ptr = arr;
      for (int i = 0; i < 5; ++i) {
          std::cout << ptr << " "; // Incorrect: prints the address of the pointer
      }
      ```
 
 3. **Array Indexing**:
-   - 📋 You can use array indexing to access array elements.
+   - **Description**: Accesses array elements using the array index.
    - **Example**:
      ```cpp
      for (int i = 0; i < 5; ++i) {
-         std::cout << arr[i] << " "; // Accessing array elements using array indexing
+         std::cout << arr[i] << " ";
      }
      ```
 
-4. **Range-based For Loop with Array**:
-   - 📋 You can use a range-based for loop to iterate over array elements.
+4. **Range-based for Loop with Array**:
+   - **Description**: Iterates over array elements using a range-based for loop.
    - **Example**:
      ```cpp
      for (int value : arr) {
-         std::cout << value << " "; // Accessing array elements using range-based for loop
+         std::cout << value << " ";
      }
      ```
 
-5. **Iterating with Pointers**:
-   - 📋 You can use a pointer in a traditional for loop to iterate over array elements.
+5. **Range-based for Loop with Pointers**:
+   - **Description**: Iterates over array elements using a range-based for loop with pointers.
    - **Example**:
      ```cpp
      for (int* p = arr; p < arr + 5; ++p) {
-         std::cout << *p << " "; // Accessing array elements using pointer in a traditional for loop
+         std::cout << *p << " ";
      }
      ```
-
-## Limitations
-- **Range-based For Loop with Pointers**:
-  - 🚫 Pointers cannot be directly used in range-based for loops as they are designed to work with containers.
-  - **Example**:
-    ```cpp
-    // This will not work:
-    // for (int* p : arr) { ... }
-    ```
 
 ## Example Code
 
@@ -76,7 +63,7 @@ Demonstrates various methods to print array elements using pointers and array in
  * - Incorrect usage of pointers to print array elements.
  * - Printing array elements using array indexing.
  * - Printing array elements using a range-based for loop with an array.
- * - Printing array elements using pointers in a traditional for loop.
+ * - Printing array elements using a range-based for loop with pointers.
  * 
  * @note The incorrect usage section highlights the mistake of printing the pointer address instead of the values.
  * 
@@ -119,8 +106,8 @@ int main() {
     }
     std::cout << std::endl;
 
-    // Print the array elements using pointers in a traditional for loop
-    std::cout << "Array elements using pointers in a traditional for loop:" << std::endl;
+    // Print the array elements using range-based for loop (pointer)
+    std::cout << "Array elements using range-based for loop (pointer):" << std::endl;
     for (int* p = arr; p < arr + 5; ++p) {
         std::cout << *p << " ";
     }

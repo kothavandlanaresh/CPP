@@ -16,9 +16,10 @@
 13. [Functions in C++](#functions-in-c)
 14. [Recursive Functions in C++](#recursive-functions-in-c)
 15. [References in C++](#references-in-c)
-
-
-
+16. [Void Pointers and Address Printing in C++](#void-pointers-and-address-printing-in-c)
+17. [Pass by Value and Reference in C++](#pass-by-value-and-reference-in-c)
+18. [Dynamic Memory Management in C++](#dynamic-memory-management-in-c)
+19. [Pointer and Array Arithmetic in C++](#pointer-and-array-arithmetic-in-c)
 ---
 
 
@@ -213,25 +214,55 @@ For detailed examples and explanations, refer to [18_address&.md](Markdown_Files
 ---
 
 
+#### Void Pointers and Address Printing in C++
+- 📝 **Void Pointers**: A pointer that can hold the address of any data type.
+- 📝 **Casting to Void Pointer**: Used to print the address of a variable.
+- 📝 **Handling Void Pointers in Functions**: Demonstrates how to cast void pointers back to the appropriate type.
 
-
-
----
-
-
-
-
-
----
-
-
-
+For detailed examples and explanations, refer to [18a_address&.md](Markdown_Files/18a_address&.md).
 
 
 ---
 
 
+#### Pass by Value and Reference in C++
+- 📝 **Pass by Value**: The function receives a copy of the argument. Changes to the parameter do not affect the original argument.
+- 📝 **Pass by Reference**: The function receives a reference to the original argument. Changes to the parameter affect the original argument.
+- 📝 **Pass by Pointer**: The function receives a pointer to the original argument. Changes to the dereferenced pointer affect the original argument.
+- 📝 **Pass by Const Reference**: The function receives a const reference to the original argument. Changes to the parameter do not affect the original argument.
+- 📝 **Pass by Const Pointer**: The function receives a const pointer to the original argument. Changes to the dereferenced pointer do not affect the original argument.
+- 📝 **Pass by Rvalue Reference**: The function receives a reference to an rvalue (temporary object). Changes to the parameter affect the original rvalue.
 
+For detailed examples and explanations, refer to [21_pass_by_value_reference.md](Markdown_Files/21_pass_by_value_reference.md).
+
+
+---
+
+
+#### Dynamic Memory Management in C++
+- 📝 **Dynamic Memory Allocation**: Allocates memory on the heap at runtime.
+- 📝 **Manual Memory Management**: Requires explicit deallocation of memory to avoid memory leaks.
+- 📝 **Dangling Pointer**: A pointer that references deallocated memory, leading to undefined behavior if accessed.
+- 📝 **Double Delete**: Deleting the same memory twice can cause a crash or undefined behavior.
+- 📝 **Best Practice**: Set pointer to `nullptr` after deleting to avoid dangling pointers.
+- 📝 **Allocating Arrays**: Allocates memory for an array of elements.
+- 📝 **Deleting Arrays**: Requires `delete[]` to deallocate memory for arrays.
+- 📝 **Smart Pointers**: Use smart pointers like `std::unique_ptr` to avoid manual memory management.
+
+For detailed examples and explanations, refer to [25_new_and_delete.md](Markdown_Files/25_new_and_delete.md).
+
+
+---
+
+
+#### Pointer and Array Arithmetic in C++
+- 📝 **Pointer Arithmetic**: Accesses array elements by incrementing the pointer.
+- 📝 **Incorrect Usage of Pointers**: Highlights the mistake of printing the pointer address instead of the values.
+- 📝 **Array Indexing**: Accesses array elements using the array index.
+- 📝 **Range-based for Loop with Array**: Iterates over array elements using a range-based for loop.
+- 📝 **Range-based for Loop with Pointers**: Iterates over array elements using a range-based for loop with pointers.
+
+For detailed examples and explanations, refer to [26_pointer_array_arithmetic.md](Markdown_Files/26_pointer_array_arithmetic.md).
 
 
 
