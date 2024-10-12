@@ -1,7 +1,7 @@
 # Important Notes
 
 ### Casting Away Const
-    Casting away `const` can be done but it is a bad practice.
+- Casting away `const` can be done but it is a bad practice.
 
 
 ### String Initialization
@@ -12,7 +12,7 @@
 
 
 ### Globals
-    Globals are no good.
+- Globals are no good.
 
 
 ### Reference 01
