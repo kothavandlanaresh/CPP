@@ -429,19 +429,27 @@
       ```
 
 #### Summary
-- **`&` (Address-of Operator)**: Used to get the address of a variable.
-- **`*` (Dereference Operator)**: Used to access the value at the memory address pointed to by a pointer.
-- **`&&` (Rvalue Reference)**: Used to bind to temporary objects (rvalues).
-- **Binding a Null Pointer to a Reference**: Illegal and results in undefined behavior.
-- **Casting Away `const`**: Bad practice and can lead to errors.
-- **Passing by Reference**: Efficient, modifies the original variable.
-- **Passing by Pointer**: Efficient, modifies the original variable, requires careful handling.
-- **Passing by Rvalue Reference**: Efficient, modifies temporary objects, should be used with care.
+- **`&` (Address-of Operator)**: 📋 Used to get the address of a variable.
+- **`*` (Dereference Operator)**: 📋 Used to access the value at the memory address pointed to by a pointer.
+- **`&&` (Rvalue Reference)**: 📋 Used to bind to temporary objects (rvalues).
+- **Binding a Null Pointer to a Reference**: 🚫 Illegal and results in undefined behavior.
+- **Casting Away `const`**: 🚫 Bad practice and can lead to errors.
+- **Passing by Reference**: 📋 Efficient, modifies the original variable.
+- **Passing by Pointer**: 📋 Efficient, modifies the original variable, requires careful handling.
+- **Passing by Rvalue Reference**: 📋 Efficient, modifies temporary objects, should be used with care.
 
 #### Dangerous Habits and How to Avoid Them
-- **Dereferencing Null Pointers**: Always check if a pointer is null before dereferencing it.
-- **Casting Away `const`**: Avoid modifying `const` values. If necessary, ensure the original intent of `const` correctness is preserved.
-- **Binding Null Pointers to References**: Never bind a reference to a dereferenced null pointer.
-- **Misusing Rvalue References**: Ensure rvalue references are used appropriately and understand the implications of `std::move`.
-- **Memory Leaks**: Always manage dynamic memory properly, using smart pointers where possible.
-- **Undefined Behavior**: Be cautious of operations that can lead to undefined behavior, such as out-of-bounds access or modifying `const` data.
+- **Dereferencing Null Pointers**: 🚫 Always check if a pointer is null before dereferencing it.
+- **Casting Away `const`**: 🚫 Avoid modifying `const` values. If necessary, ensure the original intent of `const` correctness is preserved.
+- **Binding Null Pointers to References**: 🚫 Never bind a reference to a dereferenced null pointer.
+- **Misusing Rvalue References**: 🚫 Ensure rvalue references are used appropriately and understand the implications of `std::move`.
+- **Memory Leaks**: 🚫 Always manage dynamic memory properly, using smart pointers where possible.
+- **Undefined Behavior**: 🚫 Be cautious of operations that can lead to undefined behavior, such as out-of-bounds access or modifying `const` data.
+
+#### Possible Wrong Bindings Summary
+- **Binding a Null Pointer to a Reference**: 🚫 Illegal and results in undefined behavior.
+- **Binding a Temporary Object to a Non-const Lvalue Reference**: 🚫 Illegal and causes a compilation error.
+- **Binding a Const Reference to a Non-const Object**: ⚠️ Legal but misleading.
+- **Binding a Pointer to a Deleted Object**: 🚫 Illegal and results in undefined behavior.
+- **Binding a Reference to an Out-of-Scope Variable**: 🚫 Illegal and results in undefined behavior.
+- **Binding a Reference to a Moved-from Object**: ⚠️ Legal but dangerous.
