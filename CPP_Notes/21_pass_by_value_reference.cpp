@@ -15,42 +15,6 @@ void passByPointer(int *x) {
     *x = 100; // This change will affect the original variable
 }
 
-int main() {
-    int a = 10;
-    int b = 10;
-    int c = 10;
-
-    std::cout << "Initial values: a = " << a << ", b = " << b << ", c = " << c << std::endl;
-
-    passByValue(a);
-    std::cout << "After passByValue: a = " << a << std::endl; // a remains 10
-
-    passByReference(b);
-    std::cout << "After passByReference: b = " << b << std::endl; // b becomes 100
-
-    passByPointer(&c);
-    std::cout << "After passByPointer: c = " << c << std::endl; // c becomes 100
-
-    return 0;
-}
-
-// Explanation of lvalue and rvalue
-void lvalueRvalueExample() {
-    int x = 10; // x is an lvalue, 10 is an rvalue
-    int &ref = x; // ref is an lvalue reference to x
-    // int &ref2 = 10; // Error: cannot bind non-const lvalue reference to an rvalue
-
-    const int &constRef = 10; // Valid: const lvalue reference can bind to an rvalue
-
-    int &&rvalueRef = 20; // rvalueRef is an rvalue reference to 20
-    // int &&rvalueRef2 = x; // Error: cannot bind rvalue reference to an lvalue
-
-    rvalueRef = 30; // Valid: modifying the rvalue reference
-}
-
-int main() {
-    lvalueRvalueExample();
-    return 0;
 // Function to demonstrate passing by const reference
 void passByConstReference(const int &x) {
     // x = 100; // Error: cannot modify a const reference
@@ -67,6 +31,20 @@ void passByConstPointer(const int *x) {
 void passByRvalueReference(int &&x) {
     x = 100; // This change will affect the original rvalue
     std::cout << "Inside passByRvalueReference: x = " << x << std::endl;
+}
+
+// Explanation of lvalue and rvalue
+void lvalueRvalueExample() {
+    int x = 10; // x is an lvalue, 10 is an rvalue
+    int &ref = x; // ref is an lvalue reference to x
+    // int &ref2 = 10; // Error: cannot bind non-const lvalue reference to an rvalue
+
+    const int &constRef = 10; // Valid: const lvalue reference can bind to an rvalue
+
+    int &&rvalueRef = 20; // rvalueRef is an rvalue reference to 20
+    // int &&rvalueRef2 = x; // Error: cannot bind rvalue reference to an lvalue
+
+    rvalueRef = 30; // Valid: modifying the rvalue reference
 }
 
 int main() {
@@ -99,9 +77,9 @@ int main() {
     return 0;
 }
 
-// Detailed documentation on passing mechanisms
-
 /*
+Detailed documentation on passing mechanisms
+
 Pass by Value:
 - The function receives a copy of the argument.
 - Changes to the parameter do not affect the original argument.
