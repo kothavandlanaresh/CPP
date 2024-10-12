@@ -27,5 +27,9 @@
 - **Default Initialization**: `MyClass obj4;` - Calls the default constructor.
 
 
+<<<<<<< HEAD
 ### test
+=======
+### 
+>>>>>>> a2fec8aa7d492f89003c8fb9d88e88d64ee231ab
 
