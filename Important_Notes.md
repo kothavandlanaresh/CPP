@@ -16,14 +16,16 @@
 
 ---
 
-### Reference 01
+### Inline Functions, Extern Variables, and Friend Functions
+<span style="font-size: 50%;">**Reference 01**: Detailed explanations can be found in `Reference01.cpp`.</span>
 - **Inline Functions**: Defined with `inline` to suggest inlining the function's body at the call site.
 - **Extern Variables**: Declared with `extern` to indicate definition in another translation unit, typically declared in headers and defined in source files.
 - **Friend Functions**: Declared with `friend` within a class to access private and protected members.
 
 ---
 
-### Reference 02
+### Initialization Methods
+<span style="font-size: 50%;">**Reference 02**: Detailed explanations can be found in `Reference02.cpp`.</span>
 - **Direct Initialization**: `MyClass obj1(99);` - Directly calls the constructor with arguments.
 - **Copy Initialization**: `MyClass obj2 = 99;` - Looks like assignment but calls the constructor.
 - **Uniform Initialization**: `MyClass obj3{99};` - Uses braces, avoids parsing issues, and is preferred in modern C++.
@@ -31,7 +33,15 @@
 
 ---
 
-### Reference 13
+### Compile-time vs. Runtime
+<span style="font-size: 50%;">**Reference 03**: Detailed explanations can be found in `03_compiletime_and_runtime.cpp`.</span>
+- **Compile-time**: Calculations and decisions made during the compilation of the program. Using `constexpr` can lead to performance benefits as the result is computed during compilation.
+- **Runtime**: Calculations and decisions made during the execution of the program. Functions not marked with `constexpr` are computed during runtime.
+
+---
+
+### Containers and Smart Pointers
+<span style="font-size: 50%;">**Reference 13**: Detailed explanations can be found in `Reference13.cpp`.</span>
 - **std::array**: A fixed-size array offering bounds checking in debug mode and seamless integration with the C++ Standard Library, providing a safer alternative to raw arrays.
 - **std::vector**: A dynamic array that resizes automatically, manages memory efficiently, and includes bounds checking, making it highly flexible and robust.
 - **Smart Pointers (std::unique_ptr and std::shared_ptr)**: These manage the lifetime of dynamically allocated objects, reducing memory leaks and dangling pointers through automatic memory management.
@@ -43,3 +53,38 @@
 
 #### Conclusion
 - **std::vector**: The C++ Standard Library's containers and smart pointers offer significant advantages over raw pointers and arrays. Among these, `std::vector` stands out for its flexibility, reliable memory management, and comprehensive bounds checking, making it the preferred choice for many developers.
+
+---
+
+### Loop Types and Performance Optimization
+<span style="font-size: 50%;">**Reference 14**: Detailed explanations can be found in `Reference14.cpp`.</span>
+
+#### **Range-based for loop**
+- **Syntax**: `for (const auto& element : container)`
+- The `auto` keyword deduces the type of the elements in the container.
+- It is more readable and less error-prone.
+- Avoids the need for explicit indexing.
+- Prevents accidental modification of the container elements by using `const` reference.
+- Better performance as it avoids copying elements.
+- However, it cannot be used if you need to modify the container or access the index.
+
+#### **Traditional for loop**
+- **Syntax**: `for (size_t i = 0; i < container.size(); ++i)`
+- Provides more control over the iteration process.
+- Useful when you need to modify elements or access the index.
+- More verbose and prone to off-by-one errors.
+
+#### **While loop**
+- **Syntax**: `while (condition) { // code }`
+- Useful when the number of iterations is not known beforehand.
+- Can be less readable if the loop condition is complex.
+
+#### **Do-while loop**
+- **Syntax**: `do { // code } while (condition);`
+- Similar to while loop but guarantees at least one iteration.
+- Useful when the loop body needs to be executed at least once.
+
+#### **Performance Optimization Tips**
+- Prefer range-based for loops for better readability and performance.
+- Use `const` references to avoid unnecessary copying.
+- Choose the appropriate loop type based on the specific use case.
