@@ -4,12 +4,14 @@
 
 ### Casting Away Const
 - 🚫 **Bad Practice**: Casting away `const` can be done but it is a bad practice.
-      #### Example
-      - **Bad Practice**:
-      ```cpp
-      const int a = 10;
-      int* p = const_cast<int*>(&a);
-      *p = 20; 
+     
+   #### Example
+         - **Bad Practice**:
+         ```cpp
+         const int a = 10;
+         int* p = const_cast<int*>(&a);
+         *p = 20; 
+
 
 ---
 
