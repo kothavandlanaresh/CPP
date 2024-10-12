@@ -1,7 +1,4 @@
-
-### [Important_Notes.md](http://_vscodecontentref_/#%7B%22uri%22%3A%7B%22%24mid%22%3A1%2C%22fsPath%22%3A%22c%3A%5C%5CUsers%5C%5Ck6ros%5C%5CDocuments%5C%5CGitHub%5C%5CCPP%5C%5CImportant_Notes.md%22%2C%22_sep%22%3A1%2C%22path%22%3A%22%2FC%3A%2FUsers%2Fk6ros%2FDocuments%2FGitHub%2FCPP%2FImportant_Notes.md%22%2C%22scheme%22%3A%22file%22%7D%7D)
-
-```markdown
+Important_Notes.md
 ### Summary of Important Concepts
 
 #### Pointer and Array Arithmetic in C++
