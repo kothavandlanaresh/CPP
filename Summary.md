@@ -1,18 +1,3 @@
-Important_Notes.md
-### Summary of Important Concepts
-
-#### Pointer and Array Arithmetic in C++
-- **Pointer Arithmetic**: Allows accessing array elements using pointer arithmetic.
-- **Incorrect Usage of Pointers**: Avoid printing pointer addresses instead of values.
-- **Array Indexing**: Allows accessing array elements using array indexing.
-- **Range-based For Loop with Array**: Allows iterating over array elements using a range-based for loop.
-- **Iterating with Pointers**: Allows iterating over array elements using pointers in a traditional for loop, but pointers cannot be directly used in range-based for loops.
-
-For detailed examples and explanations, refer to [26_pointer_array_arithmetic.md](26_pointer_array_arithmetic.md).
-
-
-
-
 ### file:///c%3A/Users/k6ros/Documents/GitHub/CPP/Important_Notes.md
 
 ```markdown
